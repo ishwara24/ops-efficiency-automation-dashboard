@@ -27,8 +27,9 @@ Operations teams lose time and margin due to manual data merging, inconsistent f
 ---
 
 ## Quick-start (run locally in 5 minutes)
-1. Clone the repo:
-```bash
+
+### Clone the repo:
+
 git clone https://github.com/ishwara24/ops-efficiency-automation-dashboard
 cd ops-dashboard-project
 (Optional) Create and activate a Python virtual environment:
@@ -38,53 +39,36 @@ python -m venv venv
 venv\Scripts\activate.bat
 # macOS/Linux
 # source venv/bin/activate
-
-
 Install dependencies:
 
 pip install -r requirements.txt
-
-
 Generate sample files (optional, already included):
 
 python code\generate_sample_branch_files.py
-
-
 Run the ETL pipeline:
 
 python code\etl_pipeline.py
+Outputs will be generated in output/final_cleaned.csv and summary files.
 
+Open PowerBI/Operations_Dashboard.pbix (or Operations_Dashboard.pdf) in Power BI Desktop.
 
-Outputs will be in output/final_cleaned.csv and summary files.
+Key Files Explained
+code/generate_sample_branch_files.py
+Creates reproducible synthetic branch CSVs for testing.
 
-Open PowerBI/Operations_Dashboard.pbix (or Operations_Dashboard.pdf) in Power BI Desktop or view the PDF.
+code/etl_pipeline.py
+Reads all CSVs, cleans them, engineers operational metrics (total_fulfillment_days, on_time, cost_impact), and exports cleaned + aggregated CSVs.
 
-## Key Files Explained
+output/final_cleaned.csv
+Final master table used for Power BI analysis.
 
-- **code/generate_sample_branch_files.py**  
-  Creates reproducible synthetic branch CSVs for testing.
+PowerBI/Operations_Dashboard.pbix
+Power BI report containing KPIs, regional performance, branch analysis, and drilldown pages.
 
-- **code/etl_pipeline.py**  
-  Reads all CSVs, cleans them, engineers operational metrics (`total_fulfillment_days`, `on_time`, `cost_impact`), and exports cleaned + aggregated CSVs.
-
-- **output/final_cleaned.csv**  
-  Final master table used for Power BI analysis.
-
-- **PowerBI/Operations_Dashboard.pbix**  
-  Power BI report containing KPIs, regional performance, branch analysis, and drilldown pages.
-
----
-
-## Author
-
-**Ishwara Sinha**  
-📧 Email: **ishwarasinha24@gmail.com**  
-🔗 LinkedIn: https://linkedin.com/in/ishwara-sinha  
-💻 GitHub: https://github.com/ishwara24  
+Author
+Ishwara Sinha
+📧 Email: ishwarasinha24@gmail.com
+🔗 LinkedIn: https://linkedin.com/in/ishwara-sinha
+💻 GitHub: https://github.com/ishwara24
 ✍️ Hashnode Blog: https://hashnode.com/691ddb2ebab204c3911d84cd/dashboard
-
-
----
-
-
 
