@@ -1,74 +1,140 @@
-# ops-efficiency-automation-dashboard
-Operations Efficiency &amp; Automation — Python ETL + Power BI dashboard
-
-# Operations Efficiency & Automation Dashboard
-
-**TL;DR — What this is (15 seconds)**  
-A compact, end-to-end operations analytics project that automates ingestion of daily branch order files (Python ETL), produces a cleaned master dataset, and exposes business-ready KPIs and drilldowns in a Power BI dashboard. Built to demonstrate automation + analytics + business impact for operations-focused analyst roles.
-
-![dashboard screenshot](dashboard.png)
+# 🧭 Operations Efficiency & Automation Dashboard  
+### Python ETL + Power BI • End-to-End Analytics Project
 
 ---
 
-## Why this project matters 
-Operations teams lose time and margin due to manual data merging, inconsistent file formats, late deliveries and returns. This project shows how to turn multiple daily CSVs from branches into a single, repeatable pipeline and a visual product that answers: *Which branches/regions are causing delays? How much are late deliveries costing? Are operational changes improving fulfillment times?* all with a fast, reproducible workflow.
+## 🚀 TL;DR — What This Project Delivers  
+A complete operations analytics workflow that:
+
+- Automates ingestion & cleaning of **daily branch order files** using **Python ETL**  
+- Produces a unified, analysis-ready dataset  
+- Reveals operational bottlenecks through **Power BI dashboards**  
+- Quantifies **on-time delivery performance**, **delay patterns**, and **cost impact**  
+- Demonstrates **business-focused analytics + automation** — ideal for Operations, Business Analyst, and Data Analyst roles
+
+![Dashboard Screenshot](PowerBI/dashboard.png)
 
 ---
 
-## Highlights
-- **Automated ETL**: Python script merges multiple branch CSVs, normalizes schema, parses dates and engineers metrics (processing time, fulfillment days, on-time flag, cost impact).
-- **Power BI Dashboard**: Clean executive KPIs + region/branch visualizations + order-level drilldown for root-cause analysis.
-- **Business impact**: Identified top-delay branches and estimated an **₹112.6K** cost impact from late deliveries/returns in sample data.
-- **Quick reproducibility**: Full pipeline runs locally and produces `output/final_cleaned.csv` ready for BI consumption.
+## 📌 Why This Project Matters  
+Operations teams lose money from:
+
+- Manual merging of branch files  
+- Inconsistent data formats  
+- Delayed deliveries  
+- High return rates  
+- Lack of visibility into branch/region performance  
+
+This project solves those problems by building a **repeatable data pipeline** + **executive dashboard** showing:
+
+- Which branches/regions cause delays  
+- How much money late deliveries cost  
+- Trends in fulfillment time  
+- Data-driven recommendations for fixing bottlenecks  
 
 ---
 
+## ✨ Highlights (What Makes This Project Stand Out)
+
+### ⚙️ **Automated ETL Pipeline**
+- Merges multi-branch CSVs  
+- Cleans/normalizes schema  
+- Engineers key metrics:  
+  - `processing_time_days`  
+  - `delivery_time_days`  
+  - `total_fulfillment_days`  
+  - `on_time` (SLA-based)  
+  - `cost_impact`  
+
+### 📊 **Power BI Dashboard**
+- KPI summary (On-Time %, Avg Fulfillment Days, Cost Impact)  
+- Region-wise performance  
+- Daily efficiency trends  
+- Branch performance table  
+- Drilldown page for order-level analysis  
+
+### 💰 **Business Impact Identified**
+- ₹112.6K potential cost impact due to delays & returns (sample data)  
+- North region identified as high-delay zone  
+- West A branch marked as top performer  
+- Delivery times just above SLA → opportunity for optimization  
+
+### ⚡ **Super Reproducible**
+Just run the ETL script — everything rebuilds automatically.
 
 ---
 
-## Quick-start (run locally in 5 minutes)
+## 🛠️ Quick Start (Run Locally in 5 Minutes)
 
-### Clone the repo:
-
+### **1️⃣ Clone the repository**
+```bash
 git clone https://github.com/ishwara24/ops-efficiency-automation-dashboard
 cd ops-dashboard-project
-(Optional) Create and activate a Python virtual environment:
-
+2️⃣ (Optional) Create a virtual environment
 python -m venv venv
-# Windows (cmd)
+# Windows
 venv\Scripts\activate.bat
 # macOS/Linux
 # source venv/bin/activate
-Install dependencies:
 
+3️⃣ Install dependencies
 pip install -r requirements.txt
-Generate sample files (optional, already included):
 
-python code\generate_sample_branch_files.py
-Run the ETL pipeline:
+4️⃣ Generate sample branch files (optional)
+python code/generate_sample_branch_files.py
 
+5️⃣ Run the ETL pipeline
 python code\etl_pipeline.py
-Outputs will be generated in output/final_cleaned.csv and summary files.
 
-Open PowerBI/Operations_Dashboard.pbix (or Operations_Dashboard.pdf) in Power BI Desktop.
+6️⃣ Open the Power BI Dashboard
 
-Key Files Explained
-code/generate_sample_branch_files.py
-Creates reproducible synthetic branch CSVs for testing.
-
-code/etl_pipeline.py
-Reads all CSVs, cleans them, engineers operational metrics (total_fulfillment_days, on_time, cost_impact), and exports cleaned + aggregated CSVs.
-
-output/final_cleaned.csv
-Final master table used for Power BI analysis.
+Open:
 
 PowerBI/Operations_Dashboard.pbix
-Power BI report containing KPIs, regional performance, branch analysis, and drilldown pages.
 
-Author
+
+(or the exported PDF/PNG)
+
+---
+📁 Project Structure
+ops-dashboard-project/
+│
+├── code/
+│   ├── generate_sample_branch_files.py    # Generates reproducible synthetic branch CSVs
+│   └── etl_pipeline.py                    # Main ETL pipeline
+│
+├── branch_files/                          # Sample input branch CSVs
+├── output/                                # Cleaned + aggregated ETL outputs
+│
+├── PowerBI/
+│   ├── Operations_Dashboard.pbix          # Main Power BI report
+│   └── dashboard.png                       # Dashboard screenshot
+│
+├── requirements.txt
+└── README.md
+🧩 Key Files Explained
+
+code/generate_sample_branch_files.py
+Creates reproducible synthetic branch CSVs.
+
+code/etl_pipeline.py
+Cleans all CSVs, engineers operations metrics, and exports final datasets.
+
+output/final_cleaned.csv
+Master dataset ready for BI.
+
+PowerBI/Operations_Dashboard.pbix
+Full interactive Power BI dashboard.
+
+👤 Author
+
 Ishwara Sinha
 📧 Email: ishwarasinha24@gmail.com
+
 🔗 LinkedIn: https://linkedin.com/in/ishwara-sinha
+
 💻 GitHub: https://github.com/ishwara24
+
 ✍️ Hashnode Blog: https://hashnode.com/691ddb2ebab204c3911d84cd/dashboard
+
 
