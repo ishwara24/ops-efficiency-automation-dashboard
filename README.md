@@ -11,7 +11,7 @@ A compact, end-to-end operations analytics project that automates ingestion of d
 ---
 
 ## Why this project matters 
-Operations teams lose time and margin due to manual data merging, inconsistent file formats, late deliveries and returns. This project shows how to turn multiple daily CSVs from branches into a single, repeatable pipeline and a visual product that answers: *Which branches/regions are causing delays? How much are late deliveries costing? Are operational changes improving fulfillment times?* — all with a fast, reproducible workflow.
+Operations teams lose time and margin due to manual data merging, inconsistent file formats, late deliveries and returns. This project shows how to turn multiple daily CSVs from branches into a single, repeatable pipeline and a visual product that answers: *Which branches/regions are causing delays? How much are late deliveries costing? Are operational changes improving fulfillment times?* all with a fast, reproducible workflow.
 
 ---
 
@@ -58,20 +58,33 @@ python code\etl_pipeline.py
 Outputs will be in output/final_cleaned.csv and summary files.
 
 Open PowerBI/Operations_Dashboard.pbix (or Operations_Dashboard.pdf) in Power BI Desktop or view the PDF.
+
+## Key Files Explained
+
+- **code/generate_sample_branch_files.py**  
+  Creates reproducible synthetic branch CSVs for testing.
+
+- **code/etl_pipeline.py**  
+  Reads all CSVs, cleans them, engineers operational metrics (`total_fulfillment_days`, `on_time`, `cost_impact`), and exports cleaned + aggregated CSVs.
+
+- **output/final_cleaned.csv**  
+  Final master table used for Power BI analysis.
+
+- **PowerBI/Operations_Dashboard.pbix**  
+  Power BI report containing KPIs, regional performance, branch analysis, and drilldown pages.
+
 ---
 
-## **Key files explained**
-code/generate_sample_branch_files.py — creates reproducible synthetic branch CSVs for testing.
+## Author
 
-code/etl_pipeline.py — reads all CSVs, cleans, engineers total_fulfillment_days, on_time, cost_impact, and exports cleaned & aggregated CSVs.
+**Ishwara Sinha**  
+📧 Email: **ishwarasinha24@gmail.com**  
+🔗 LinkedIn: https://linkedin.com/in/ishwara-sinha  
+💻 GitHub: https://github.com/ishwara24  
+✍️ Hashnode Blog: https://hashnode.com/691ddb2ebab204c3911d84cd/dashboard
 
-output/final_cleaned.csv — final master table for BI.
-
-PowerBI/Operations_Dashboard.pbix — report with KPIs, region & branch analyses and drilldown.
 
 ---
 
-<Ishwara Sinha> — <ishwarasinha24@gmail.com>
-LinkedIn: <linkedin.com/in/ishwara-sinha/> | GitHub: <https://github.com/ishwara24>
 
 
