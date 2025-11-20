@@ -94,26 +94,12 @@ PowerBI/Operations_Dashboard.pbix
 
 
 (or the exported PDF/PNG)
+
 ---
 
-## 📁 Project Structure
 
-ops-dashboard-project/
-│
-├── code/
-│   ├── generate_sample_branch_files.py    # Generates reproducible synthetic branch CSVs
-│   └── etl_pipeline.py                    # Main ETL pipeline
-│
-├── branch_files/                          # Sample input branch CSVs
-├── output/                                # Cleaned + aggregated ETL outputs
-│
-├── PowerBI/
-│   ├── Operations_Dashboard.pbix          # Main Power BI report
-│   └── dashboard.png                       # Dashboard screenshot
-│
-├── requirements.txt
-└── README.md
 ---
+
 ## 🧩 Key Files Explained
 
 - **code/generate_sample_branch_files.py**  
@@ -136,6 +122,9 @@ ops-dashboard-project/
 
 - **README.md**  
   Full project documentation (this file).
+
+---
+
 ## 👤 Author
 
 **Ishwara Sinha**  
@@ -143,6 +132,8 @@ ops-dashboard-project/
 🔗 LinkedIn: https://linkedin.com/in/ishwara-sinha  
 💻 GitHub: https://github.com/ishwara24  
 ✍️ Hashnode Blog: https://hashnode.com/691ddb2ebab204c3911d84cd/dashboard
+
+
 
 
 
