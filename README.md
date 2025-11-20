@@ -94,5 +94,55 @@ PowerBI/Operations_Dashboard.pbix
 
 
 (or the exported PDF/PNG)
+---
+
+## 📁 Project Structure
+
+ops-dashboard-project/
+│
+├── code/
+│   ├── generate_sample_branch_files.py    # Generates reproducible synthetic branch CSVs
+│   └── etl_pipeline.py                    # Main ETL pipeline
+│
+├── branch_files/                          # Sample input branch CSVs
+├── output/                                # Cleaned + aggregated ETL outputs
+│
+├── PowerBI/
+│   ├── Operations_Dashboard.pbix          # Main Power BI report
+│   └── dashboard.png                       # Dashboard screenshot
+│
+├── requirements.txt
+└── README.md
+---
+## 🧩 Key Files Explained
+
+- **code/generate_sample_branch_files.py**  
+  Generates reproducible synthetic branch CSVs simulating real operational data (order date, processing, delivery, regions, branches).
+
+- **code/etl_pipeline.py**  
+  Merges all branch CSVs → cleans data → parses dates → engineers metrics (`processing_time_days`, `delivery_time_days`, `total_fulfillment_days`, `on_time`, `cost_impact`) → exports final datasets for Power BI.
+
+- **output/final_cleaned.csv**  
+  The final master dataset used in the Power BI dashboard.
+
+- **output/\*_summary.csv**  
+  Region-level, branch-level, and daily summary tables for BI modeling.
+
+- **PowerBI/Operations_Dashboard.pbix**  
+  Fully interactive Power BI report with KPIs, performance visuals, and drilldown pages.
+
+- **requirements.txt**  
+  Python package list for reproducing the ETL environment.
+
+- **README.md**  
+  Full project documentation (this file).
+## 👤 Author
+
+**Ishwara Sinha**  
+📧 Email: **ishwarasinha24@gmail.com**  
+🔗 LinkedIn: https://linkedin.com/in/ishwara-sinha  
+💻 GitHub: https://github.com/ishwara24  
+✍️ Hashnode Blog: https://hashnode.com/691ddb2ebab204c3911d84cd/dashboard
+
 
 
